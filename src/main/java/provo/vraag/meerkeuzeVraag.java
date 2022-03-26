@@ -13,6 +13,9 @@ public class meerkeuzeVraag implements Vraag{
 
     @Override
     public void getVraag() {
-
+        System.out.println("Vraag: " + vraag);
+        for (String antwoord: antwoorden){
+            System.out.println(antwoord);
+        }
     }
 }
