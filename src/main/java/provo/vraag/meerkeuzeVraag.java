@@ -3,9 +3,9 @@ package provo.vraag;
 import java.util.Objects;
 
 public class meerkeuzeVraag implements Vraag{
-    private String vraag;
-    private String[] antwoorden;
-    private String correctAntwoord;
+    private final String vraag;
+    private final String[] antwoorden;
+    private final String correctAntwoord;
 
     public meerkeuzeVraag(String vraag, String[] antwoorden, String correctAntwoord) {
         this.vraag = vraag;

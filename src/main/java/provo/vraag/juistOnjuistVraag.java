@@ -3,10 +3,10 @@ package provo.vraag;
 import java.util.Objects;
 
 public class juistOnjuistVraag implements Vraag {
-    private String vraag;
-    private boolean correctAntwoord;
+    private final String vraag;
+    private final String correctAntwoord;
 
-    public juistOnjuistVraag(String vraag, boolean antwoord) {
+    public juistOnjuistVraag(String vraag, String antwoord) {
         this.vraag = vraag;
         this.correctAntwoord = antwoord;
     }
@@ -18,6 +18,6 @@ public class juistOnjuistVraag implements Vraag {
 
     @Override
     public boolean checkAntwoord(String antwoord) {
-        return Objects.equals(antwoord, correctAntwoord);
+        return (Objects.equals(antwoord, correctAntwoord));
     }
 }

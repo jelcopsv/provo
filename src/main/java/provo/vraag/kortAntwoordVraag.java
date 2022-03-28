@@ -3,8 +3,8 @@ package provo.vraag;
 import java.util.Objects;
 
 public class kortAntwoordVraag implements Vraag{
-    private String vraag;
-    private String[] antwoorden;
+    private final String vraag;
+    private final String[] antwoorden;
 
     public kortAntwoordVraag(String vraag, String[] antwoorden) {
         this.vraag = vraag;
