@@ -1,5 +1,7 @@
 package provo.vraag;
 
+import java.util.Objects;
+
 public class meerkeuzeVraag implements Vraag{
     private String vraag;
     private String[] antwoorden;
@@ -17,5 +19,10 @@ public class meerkeuzeVraag implements Vraag{
         for (String antwoord: antwoorden){
             System.out.println(antwoord);
         }
+    }
+
+    @Override
+    public boolean checkAntwoord(String antwoord) {
+        return Objects.equals(antwoord, correctAntwoord);
     }
 }

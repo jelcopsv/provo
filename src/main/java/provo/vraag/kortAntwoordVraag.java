@@ -1,5 +1,7 @@
 package provo.vraag;
 
+import java.util.Objects;
+
 public class kortAntwoordVraag implements Vraag{
     private String vraag;
     private String[] antwoorden;
@@ -12,5 +14,17 @@ public class kortAntwoordVraag implements Vraag{
     @Override
     public void getVraag() {
         System.out.println("Vraag: " + vraag);
+    }
+
+    @Override
+    public boolean checkAntwoord(String antwoord) {
+        boolean antwoordKomtOvereen = false;
+        for (String correctAntwoord : antwoorden) {
+            if (Objects.equals(antwoord, correctAntwoord)) {
+                antwoordKomtOvereen = true;
+                break;
+            }
+        }
+        return antwoordKomtOvereen;
     }
 }
