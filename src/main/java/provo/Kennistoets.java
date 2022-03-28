@@ -1,8 +1,12 @@
 package provo;
 
 import provo.vraag.Vraag;
+import provo.vraag.juistOnjuistVraag;
+import provo.vraag.meerkeuzeVraag;
 
 import java.util.Scanner;
+
+import static java.lang.Boolean.FALSE;
 
 public class Kennistoets {
     private int gebruikteTijd;
