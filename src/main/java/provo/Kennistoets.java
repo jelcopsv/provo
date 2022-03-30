@@ -21,12 +21,12 @@ public class Kennistoets {
         this.vragen = vragen;
     }
 
-    public void startToets(){
+    public void startToets(Deelnemer deelnemer){
         for(Vraag vraag:vragen){
             vraag.getVraag();
-            beantwoordVraag(vraag);
+            beantwoordVraag(vraag, deelnemer);
         }
-        getResultaat();
+        getResultaat(deelnemer);
     }
     public void betreedLokaal(){
 
@@ -34,13 +34,11 @@ public class Kennistoets {
     public void enterStudentNaam(){
 
     }
-    public void getResultaat(){
-        System.out.println("Je hebt " + aantalCorrect + " van de " + vragen.length + " vragen goed beantwoord!");
+    //deze methode is alleen om het resultaat op het einde te tonen
+    public void getResultaat(Deelnemer deelnemer){
+        System.out.println("Je hebt " + deelnemer.getScore() + " van de " + vragen.length + " vragen goed beantwoord!");
     }
-    public void beantwoordVraag(Vraag vraag){
-        String gegevenAntwoord = antwoord.nextLine();
-        if(vraag.checkAntwoord(gegevenAntwoord)==TRUE){
-            aantalCorrect++;
-        }
+    public void beantwoordVraag(Vraag vraag, Deelnemer deelnemer){
+        deelnemer.beantwoordVraag(vraag);
     }
 }

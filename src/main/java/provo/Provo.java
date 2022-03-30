@@ -17,6 +17,6 @@ public class Provo
         vragen[1] = new meerkeuzeVraag("Vraag 2: Wat leg je vast m.b.v. use cases", new String[]{"needs", "features", "functional requirements", "non-functional requirements"}, "functional requirements");
         vragen[2] = new kortAntwoordVraag("Vraag 3: Bij welk team rijdt max verstappen ", new String[]{"Red bull racing","Red bull"} );
         Kennistoets kennistoets = new Kennistoets(1000,vragen);
-        kennistoets.startToets();
+        kennistoets.startToets(new Deelnemer("Jelco"));
     }
 }
